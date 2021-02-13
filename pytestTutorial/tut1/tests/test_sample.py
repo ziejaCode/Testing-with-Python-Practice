@@ -1,4 +1,4 @@
-from tut1.myapp.sample import add
+from .tut1.myapp.sample import add
 
 
 def test_add_num():
