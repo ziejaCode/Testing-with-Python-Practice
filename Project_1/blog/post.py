@@ -8,3 +8,6 @@ class Post:
             'title': self.title,
             'content': self.content,
         }
+
+    def __repr__(self):
+        return '{} : {}'.format(self.title, self.content)

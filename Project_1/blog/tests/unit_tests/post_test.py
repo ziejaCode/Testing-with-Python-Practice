@@ -13,3 +13,8 @@ class PostTest(TestCase):
         p = Post('Test', 'Test content')
 
         self.assertDictEqual({'title': p.title, 'content': p.content}, p.json())
+
+    def test_repr(self):
+        p = p = Post('Test', 'Test content')
+
+        self.assertEqual(p.__repr__(), 'Test : Test content')
