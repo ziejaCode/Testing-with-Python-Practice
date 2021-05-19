@@ -24,9 +24,9 @@ programmer = Programmer().add_tech('python') \
     .add_tech('aws') \
     .add_tech('django')
   
-#random.choice = Mock(return_value='python')
+random.choice = Mock(return_value='python')
 
 mock = Mock(return_value='python')
-prog = mock
-print(prog.get_random_tech())
-#print(programmer.get_random_tech())
+programmer = mock
+#print(prog.get_random_tech())
+print(programmer.get_random_tech())

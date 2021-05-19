@@ -16,9 +16,4 @@ class Programmer:
         return random.choice(self.tech_names)
 
 
-programmer = Programmer().add_tech('python') \
-    .add_tech('java') \
-    .add_tech('sql') \
-    .add_tech('aws') \
-    .add_tech('django')
 

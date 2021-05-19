@@ -1,5 +1,14 @@
 from unittest.mock import patch
-from mock5 import programmer
+from mock5 import Programmer
+
+
+programmer = Programmer().add_tech('python') \
+    .add_tech('java') \
+    .add_tech('sql') \
+    .add_tech('aws') \
+    .add_tech('django')
+
+
 
 def tech_get_random_tech():
     with patch('random.choice') as mock_random:
