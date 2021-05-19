@@ -7,4 +7,17 @@ def calculate_daily_return(open, close):
 print(calculate_daily_return(12, 34))
 
 class TestCalculateDailyReturn(unittest.TestCase):
-    pass
+
+    def test_positive_return(self):
+        self.assertEqual(calculate_daily_return(350.00, 360.00), 3.15)
+
+    def test_negative_return(self):
+        self.assertEqual(calculate_daily_return(349.00, 340.00), -2.58)
+
+    def test_zero_return(self):
+        self.assertEqual(calculate_daily_return(349.00, 349.00), 0.00)
+
+    
+
+if __name__=='__main__':
+    unittest.main()
