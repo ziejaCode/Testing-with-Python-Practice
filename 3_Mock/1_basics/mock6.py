@@ -1,5 +1,5 @@
 import random
-from unittest.mock import Mock
+from unittest.mock import patch
 
 
 class Programmer:
@@ -18,15 +18,16 @@ class Programmer:
         return random.choice(self.tech_names)
 
 
-programmer = Programmer().add_tech('python') \
-    .add_tech('java') \
+programmer = Programmer()
+programmer.add_tech('python') \
     .add_tech('sql') \
-    .add_tech('aws') \
-    .add_tech('django')
-  
-random.choice = Mock(return_value='python')
+    .add_tech('java') \
+    .add_tech('c++') \
+    .add_tech('aws')
 
-mock = Mock(return_value='python')
-programmer = mock
-#print(prog.get_random_tech())
-print(programmer.get_random_tech())
+@patch('random.choice')
+def tech_get_random_tech(mock_random):
+    mock_random.return_value='c++'
+    return programmer.get_random_tech()
+
+print(tech_get_random_tech())

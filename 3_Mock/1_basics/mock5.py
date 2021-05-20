@@ -1,6 +1,4 @@
 import random
-from unittest.mock import Mock
-
 
 class Programmer:
 
@@ -18,15 +16,4 @@ class Programmer:
         return random.choice(self.tech_names)
 
 
-programmer = Programmer().add_tech('python') \
-    .add_tech('java') \
-    .add_tech('sql') \
-    .add_tech('aws') \
-    .add_tech('django')
-  
-random.choice = Mock(return_value='python')
 
-mock = Mock(return_value='python')
-programmer = mock
-#print(prog.get_random_tech())
-print(programmer.get_random_tech())
