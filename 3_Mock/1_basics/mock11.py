@@ -13,5 +13,3 @@ def get_code_with_day():
     code = get_code()
     dayname = get_today_name().upper()
     return f'{code}-{dayname}'
-
-print(get_code_with_day())

@@ -1,5 +1,6 @@
 import random
 
+
 class Programmer:
 
     def __init__(self):
@@ -15,5 +16,5 @@ class Programmer:
     def get_random_tech(self):
         return random.choice(self.tech_names)
 
-    
-
+    def display_random_tech(self):
+        return f'Technology name: {self.get_random_tech()}'
