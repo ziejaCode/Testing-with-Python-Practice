@@ -24,3 +24,8 @@ class ShoppingBasket:
         net_value = sum([product.price * product.quantity
                          for product in self.products])
         return round(net_value * (1 + tax / 100.0), 2)
+
+    def display_basket(self):
+        print('In basket:')
+        for product in self.products:
+            print(f'\t{product}')
