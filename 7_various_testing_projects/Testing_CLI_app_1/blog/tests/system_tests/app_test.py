@@ -79,7 +79,7 @@ class AppTest(TestCase):
 
     def test_print_posts(self):
         blog = app.blogs['Test']
-        blog.create_post('Post title', 'Post content')
+        #blog.create_post('Post title', 'Post content')
 
         with patch('app.print_post') as mocked_print_post:
             app.print_posts(blog)
